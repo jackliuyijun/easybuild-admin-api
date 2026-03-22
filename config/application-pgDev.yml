@@ -1,0 +1,61 @@
+spring:
+  redis:
+    database: 7
+    host: 127.0.0.1
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 20
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/eb_demo
+    username: postgres
+    password: 123456
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      # 启动时立即初始化连接池，如果连接失败则快速失败
+      initialization-fail-timeout: 1
+      # 最小空闲连接数，强制启动时至少创建1个连接
+      minimum-idle: 1
+      # 最大连接池大小
+      maximum-pool-size: 10
+      # 连接超时时间（毫秒）
+      connection-timeout: 3000
+
+#mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath*:/mappings/**/*Mapper.xml
+  global-config:
+    # 数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID",ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: auto
+      #逻辑删除配置
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+  # 原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    #调试sql语句设置
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+easyfk:
+  config:
+    web:
+      #跨域配置
+      cors:
+        open: true
+    #权限初始化配置
+    auth:
+      init: false
+    resource:
+      init:
+        open: false
+
+#在线文档配置
+knife4j:
+  #是否启用增强设置
+  enable: true
+  #开启生产环境屏蔽
+  production: false

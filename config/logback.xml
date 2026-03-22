@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender class="ch.qos.logback.core.rolling.RollingFileAppender" name="INFO-FILE">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } [%15.15thread,%X{TRACE_ID}] ---  %-40.40logger{39} [line: %L] : %msg%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- rollover daily -->
+            <fileNamePattern>
+                logs/bms-%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <MaxHistory>30</MaxHistory>
+            <maxFileSize>64MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder >
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} -%5p ${PID:- } [%15.15thread,%X{TRACE_ID}] ---  %-40.40logger{39} [line: %L] : %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="console" />
+        <appender-ref ref="INFO-FILE" />
+    </root>
+</configuration>

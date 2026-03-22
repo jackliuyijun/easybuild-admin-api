@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.mcst</groupId>
+    <artifactId>demo-bms</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <name>demo-bms</name>
+    <!-- FIXME change it to the project's website -->
+    <url>http://www.example.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>21</java.version>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <framework.version>3.2.12</framework.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.mcst</groupId>
+                <artifactId>easyfk-dependencies</artifactId>
+                <version>${framework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.mcst</groupId>
+                <artifactId>module-dependencies</artifactId>
+                <version>${framework.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>web-prd</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>log-logback</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>doc-knife4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>cache-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>orm-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>db-postgresql</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>auth-prd</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>auth-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>auth-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>dict-prd-bms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>dict-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>dict-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>user-prd-bms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>user-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>user-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>merchant-prd-bms</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>merchant-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>merchant-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>goods-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>goods-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>goods-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>media-orm-plus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>order-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>order-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>order-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>banner-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>banner-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>banner-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>brand-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>brand-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>brand-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>category-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>category-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>category-orm-plus</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>group-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>group-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>group-orm-plus</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>tag-prd-bms</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>tag-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>tag-orm-plus</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>demo-bms-server</finalName>
+        <plugins>
+            <!-- 依赖分离打包方式 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>com.easybuild.admin.bms.ServerApp</mainClass>
+                            <useUniqueVersions>false</useUniqueVersions>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <!-- 复制依赖到lib目录 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <useRepositoryLayout>false</useRepositoryLayout>
+                            <stripVersion>false</stripVersion>
+                            <stripClassifier>false</stripClassifier>
+                            <!-- 移除includeScope限制，确保所有依赖都被复制和引用 -->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- 跳过测试 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M7</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

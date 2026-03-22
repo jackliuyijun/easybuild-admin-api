@@ -1,0 +1,18 @@
+server:
+  port: 5001
+logging:
+  config: file:config/logback.xml
+
+spring:
+  application:
+    name: bms-server
+  config:
+    import:
+      - "file:config/application-pgDev.yml"
+
+#跨域配置
+easyfk:
+  config:
+    web:
+      cors:
+        open: true

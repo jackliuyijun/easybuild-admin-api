@@ -1,0 +1,47 @@
+# Gradle 相关
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IDE 相关 (IntelliJ IDEA)
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+data/
+
+# IDE 相关 (Eclipse)
+.classpath
+.project
+.settings/
+bin/
+
+# IDE 相关 (VS Code)
+.vscode/
+
+# 编译输出
+*.class
+*.jar
+!gradle-wrapper.jar
+
+# 日志文件
+*.log
+
+# 操作系统相关
+.DS_Store
+Thumbs.db
+
+# 本地配置文件
+local.properties
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+gradle
+gradlew
+gradlew.bat
+logs/
