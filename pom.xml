@@ -70,9 +70,16 @@
             <groupId>com.mcst</groupId>
             <artifactId>orm-mybatis</artifactId>
         </dependency>
-        <dependency>
+        <!-- postgresql数据库依赖 -->
+       <!-- <dependency>
             <groupId>com.mcst</groupId>
             <artifactId>db-postgresql</artifactId>
+        </dependency>-->
+
+        <!-- mysql数据库依赖 -->
+        <dependency>
+            <groupId>com.mcst</groupId>
+            <artifactId>db-mysql</artifactId>
         </dependency>
 
         <dependency>
