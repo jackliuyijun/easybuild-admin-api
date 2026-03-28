@@ -233,61 +233,6 @@
             <groupId>com.mcst</groupId>
             <artifactId>tag-orm-plus</artifactId>
         </dependency>
-
     </dependencies>
 
-    <build>
-        <finalName>demo-bms-server</finalName>
-        <plugins>
-            <!-- 依赖分离打包方式 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.easybuild.admin.bms.ServerApp</mainClass>
-                            <useUniqueVersions>false</useUniqueVersions>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-
-            <!-- 复制依赖到lib目录 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>3.2.0</version>
-                <executions>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
-                            <useRepositoryLayout>false</useRepositoryLayout>
-                            <stripVersion>false</stripVersion>
-                            <stripClassifier>false</stripClassifier>
-                            <!-- 移除includeScope限制，确保所有依赖都被复制和引用 -->
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- 跳过测试 -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M7</version>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
