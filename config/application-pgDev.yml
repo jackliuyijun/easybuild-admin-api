@@ -1,11 +1,12 @@
 spring:
-  redis:
-    database: 7
-    host: 127.0.0.1
-    port: 6379
-    lettuce:
-      pool:
-        max-active: 20
+  data:
+    redis:
+      database: 7
+      host: 127.0.0.1
+      port: 6379
+      lettuce:
+        pool:
+          max-active: 20
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/eb_demo
     username: postgres

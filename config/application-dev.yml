@@ -1,11 +1,12 @@
 spring:
-  redis:
-    database: 11
-    host: 127.0.0.1
-    port: 6379
-    lettuce:
-      pool:
-        max-active: 8
+  data:
+    redis:
+      database: 7
+      host: 127.0.0.1
+      port: 6379
+      lettuce:
+        pool:
+          max-active: 20
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/eb_demo?characterEncoding=UTF-8&useSSL=false&useInformationSchema=true&remarks=true&useUnicode=true&allowPublicKeyRetrieval=true
     username: root
