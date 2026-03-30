@@ -62,10 +62,10 @@
             <groupId>com.mcst</groupId>
             <artifactId>doc-knife4j</artifactId>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.mcst</groupId>
             <artifactId>cache-redis</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.mcst</groupId>
             <artifactId>orm-mybatis</artifactId>
