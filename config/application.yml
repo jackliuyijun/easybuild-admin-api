@@ -1,5 +1,5 @@
 server:
-  port: 5001
+  port: ${CAPort:${PORT:5001}}
 logging:
   config: file:config/logback.xml
 
@@ -8,7 +8,7 @@ spring:
     name: bms-server
   config:
     import:
-      - "file:config/application-dev.yml"
+      - "file:config/application-redis.yml"
 
 #跨域配置
 easyfk:
